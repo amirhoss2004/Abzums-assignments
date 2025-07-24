@@ -37,7 +37,7 @@ class BankAccount:
 
 
     def show_transactions(self) -> None:
-        print(f"{self.account_holder} transactions:")
+        print(f"{BankAccount.bank_name} transactions:")
         print(self.transaction)
 
         
@@ -68,7 +68,9 @@ class BankAccount:
         
         I didnt understand what validate_amount actually do?
 
+        _______________________________________________________________________
         -----------------------------------------------------------------------
+
         """)
     
     
@@ -91,7 +93,9 @@ class SavingsAccount(BankAccount):
         
         saving account:
         account holder: {self.account_holder} | current balance; {self.balance} |  current interest rate: {self.interst_rate}
+        ______________________________________________________________________
         ----------------------------------------------------------------------
+        
     """)
     
         
@@ -111,11 +115,15 @@ my_bank=r"""
        | |     |       _______       |     | |
        |||     |      /___ ___\      |     |||  
        | |     |      |   |   |      |     | |  
-     __|||     |      | . | . |      |     ||| _ 
+     _ |||     |      | . | . |      |     ||| _ 
     //----------______|___|___|______----------\\
-   //  -  -  -_|_____________________|_ -  -  - \\   
-  //   - ____|_________________________|____  -  \\
- //    -|___________________________________| -   \\ 
+   // -   -  -_|_____________________|_ -  -  - \\   
+  //  -  ____|_________________________|____  -  \\
+ //   - |___________________________________| -   \\ 
+
+
+
+
 """
 
 cowsay.draw(f"hello and welcom to {BankAccount.bank_name}" , my_bank)
@@ -141,5 +149,6 @@ user3.add_interest()
 user3.__str__()
 #transactions
 user1.show_transactions()
-cowsay.draw(f"""Thanks for choosing our services 
+
+cowsay.draw(f"""Thanks for choosing our service
                    -from {BankAccount.bank_name}""", my_bank)

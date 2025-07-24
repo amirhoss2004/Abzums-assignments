@@ -1,4 +1,4 @@
-
+import cowsay
 from datetime import datetime as dt
 today=dt.now()
 class BankAccount:
@@ -97,7 +97,28 @@ class SavingsAccount(BankAccount):
         
 transaction=[]
 
+my_bank=r"""
+\_ |          
+  \_\      _______________________________
+    \\    /   _________________________   \
+      \  /   |                         |   \
+        /    |          BANK           |    \ 
+      _|     |__ ____ _________ ____ __|     |_  
+    _|_________________________________________|_
+    |___________________________________________|
+      \---/    |                     |    \---/           
+       |||     |                     |     |||                  
+       | |     |       _______       |     | |
+       |||     |      /___ ___\      |     |||  
+       | |     |      |   |   |      |     | |  
+     __|||     |      | . | . |      |     ||| _ 
+    //----------______|___|___|______----------\\
+   //  -  -  -_|_____________________|_ -  -  - \\   
+  //   - ____|_________________________|____  -  \\
+ //    -|___________________________________| -   \\ 
+"""
 
+cowsay.draw(f"hello and welcom to {BankAccount.bank_name}" , my_bank)
 
 # accounts
 user1=BankAccount("mamad", 2.1)
@@ -118,5 +139,7 @@ user3=SavingsAccount("Charlie",50.0 ,0.05 )
 user3.deposite(1000)
 user3.add_interest()
 user3.__str__()
-
+#transactions
 user1.show_transactions()
+cowsay.draw(f"""Thanks for choosing our services 
+                   -from {BankAccount.bank_name}""", my_bank)

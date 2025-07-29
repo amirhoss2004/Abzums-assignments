@@ -61,8 +61,8 @@ class BankAccount:
         print(f"""
                  ||
                  ||
-                \||/
-        _________\/___________________________________________________________
+               \\||//
+        ________\\//__________________________________________________________
         
         account Holeder: {self.account_holder} | total balance: {self.balance}  | initial balance: {self.initial_balance}
         
@@ -88,8 +88,8 @@ class SavingsAccount(BankAccount):
         print(f"""
                  ||
                  ||
-                \||/
-        _________\/___________________________________________________________
+               \\||//
+        ________\\//__________________________________________________________
         
         saving account:
         account holder: {self.account_holder} | current balance; {self.balance} |  current interest rate: {self.interst_rate}
